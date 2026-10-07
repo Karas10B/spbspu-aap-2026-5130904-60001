@@ -16,8 +16,16 @@ int main()
   int resIC = 0;
 
   std::cin >> a;
+
+  if (!std::cin)
+  {
+    std::cerr << "Wrong sequence\n";
+    return 1;
+  }
+
   if (a == 0)
   {
+    std::cerr << "Not enough data\n";
     return 2;
   }
 
@@ -26,6 +34,12 @@ int main()
     a0 = a;
 
     std::cin >> a;
+
+    if (!std::cin)
+    {
+      std::cerr << "Wrong sequence\n";
+      return 1;
+    }
 
     if (a == 0)
     {
