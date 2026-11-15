@@ -1,21 +1,21 @@
 #include <iostream>
 
-int incSeq(int a, int a0){
+int incSeq(int a, int a0) {
     if (a > a0){
       return 1;
     }
-  if (a > a0){
+  if (a > a0) {
     return 1;
   }
   return 0;
 }
 
-int cntMax(int a, int am, int res_cm){
+int cntMax(int a, int am, int res_cm) {
   if (am < a && a != 0){
     return 1;
   }
 
-  if (am == a){
+  if (am == a) {
     return ++res_cm;
   }
 
@@ -32,29 +32,29 @@ int main()
 
   std::cin >> a;
 
-  if (!std::cin){
+  if (!std::cin) {
     std::cerr << "Wrong sequence\n";
     return 1;
   }
 
-  if (a == 0){
+  if (a == 0) {
     std::cerr << "Not enough data\n";
     return 2;
   }
 
   am = a;
 
-  for (size_t i = 1; i > 0; ++i){
+  for (size_t i = 1; i > 0; ++i) {
     a0 = a;
 
     std::cin >> a;
 
-    if (!std::cin){
+    if (!std::cin) {
       std::cerr << "Wrong sequence\n";
       return 1;
     }
 
-    if (a == 0){
+    if (a == 0) {
       a0 = 0;
       i = -1;
     }
