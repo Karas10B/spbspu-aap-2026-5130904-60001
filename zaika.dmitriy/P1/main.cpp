@@ -6,8 +6,8 @@ int main()
 {
   int a = 0;
   int a0 = 0;
+  int res = 0;
 
-  for (size_t i = 0;; ++i)
   std::cin >> a;
   if (a == 0)
   {
@@ -22,12 +22,17 @@ int main()
 
     if (a == 0)
     {
-      break;
+      a0 = 0;
       i = -1;
     }
 
-    std::cout << a << "\n";
     std::cout << a << " " << a0 << "\n";
   }
+    if (a > a0)
+    {
+      ++res;
+    }
 
+  }
+  std::cout << res << "\n";
 }
