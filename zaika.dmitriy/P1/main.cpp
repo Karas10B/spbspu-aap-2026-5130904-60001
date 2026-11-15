@@ -60,7 +60,7 @@ int main()
     }
 
     res_ic += incSeq(a, a0);
-    res_cm = cntMax(a, am, resCM);
+    res_cm = cntMax(a, am, res_cm);
 
     am = a;
   }
