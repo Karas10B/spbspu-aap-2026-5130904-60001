@@ -1,6 +1,5 @@
 #include <iostream>
 
-int IncSeq(int a);
 int IncSeq(int a, int a0)
 {
     if (a > a0)
@@ -14,12 +13,19 @@ int main()
 {
   int a = 0;
   int a0 = 0;
-  int res = 0;
   int resIC = 0;
 
   std::cin >> a;
+
+  if (!std::cin)
+  {
+    std::cerr << "Wrong sequence\n";
+    return 1;
+  }
+
   if (a == 0)
   {
+    std::cerr << "Not enough data\n";
     return 2;
   }
 
@@ -29,19 +35,20 @@ int main()
 
     std::cin >> a;
 
+    if (!std::cin)
+    {
+      std::cerr << "Wrong sequence\n";
+      return 1;
+    }
+
     if (a == 0)
     {
       a0 = 0;
       i = -1;
     }
 
-    if (a > a0)
-    {
-      ++res;
-    }
     resIC += IncSeq(a, a0);
 
   }
-  std::cout << res << "\n";
   std::cout << resIC << "\n";
 }
