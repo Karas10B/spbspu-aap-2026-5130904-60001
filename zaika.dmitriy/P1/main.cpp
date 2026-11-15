@@ -1,6 +1,6 @@
 #include <iostream>
 
-int IncSeq(int a, int a0){
+int incSeq(int a, int a0){
     if (a > a0){
       return 1;
     }
@@ -10,16 +10,16 @@ int IncSeq(int a, int a0){
   return 0;
 }
 
-int CntMax(int a, int am, int resCM){
+int cntMax(int a, int am, int res_cm){
   if (am < a && a != 0){
     return 1;
   }
 
   if (am == a){
-    return ++resCM;
+    return ++res_cm;
   }
 
-  return resCM;
+  return res_cm;
 }
 
 int main()
@@ -27,8 +27,8 @@ int main()
   int a = 0;
   int a0 = 0;
   int am = 0;
-  int resIC = 0;
-  int resCM = 1;
+  int res_ic = 0;
+  int res_cm = 1;
 
   std::cin >> a;
 
@@ -59,11 +59,11 @@ int main()
       i = -1;
     }
 
-    resIC += IncSeq(a, a0);
-    resCM = CntMax(a, am, resCM);
+    res_ic += incSeq(a, a0);
+    res_cm = cntMax(a, am, resCM);
 
     am = a;
   }
-  std::cout << resIC << "\n";
-  std::cout << resCM << "\n";
+  std::cout << res_ic << "\n";
+  std::cout << res_cm << "\n";
 }
